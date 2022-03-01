@@ -21,6 +21,8 @@ Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');*/
 
+//grouping routes that will only be available when the user is authenticated
+
 Route::group(['middleware' => [
     'auth:sanctum',
     'verified'
