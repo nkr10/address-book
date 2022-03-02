@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
+
+    protected $guarded = []; //fields which are not mass assignable - none
 }
