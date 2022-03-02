@@ -17,6 +17,13 @@ class Contacts extends Component
     public $date_of_birth;
     public $physical_address;
 
+    public function create()
+    {
+        Contact::create($this->modelData()); //save data
+        $this->modalFormVisible = false; //hiding modal data
+        $this->reset();
+    }
+
     /**
      * Displays the form modal
      * of the add function
@@ -25,6 +32,17 @@ class Contacts extends Component
      */
     public function addShowModal(){
         $this->modalFormVisible = true;
+    }
+
+    public function modelData(){
+        return [
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'e_mail' => $this->e_mail,
+            'phone_number' => $this->phone_number,
+            'date_of_birth' => $this->date_of_birth,
+            'physical_address' => $this->physical_address
+        ];
     }
 
     /**

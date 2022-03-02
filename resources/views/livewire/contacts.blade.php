@@ -27,7 +27,7 @@
 
             <div class="mt-4">
                 <x-jet-label for="e_mail" value="{{ __('E-mail') }}"/>
-                <x-jet-input id="e_mail" class="block mt-1 w-full" type="email" wire:model.debounce.800ms="e_mail" />
+                <x-jet-input id="e_mail" class="block mt-1 w-full" type="email" wire:model.debounce.800ms="e_mail" placeholder="you@example.com"/>
             </div>
 
             <div class="mt-4">
@@ -42,10 +42,9 @@
 
             <div class="mt-4">
                 <x-jet-label for="physical_address" value="{{ __('Physical Address') }}"/>
-                <x-jet-input id="physical_address autocomplete" onFocus="geolocate()" class="block mt-1 w-full" type="text" wire:model.debounce.800ms="physical_address" />
+                <x-jet-input id="physical_address" class="block mt-1 w-full" type="text" wire:model.debounce.800ms="physical_address" />
             </div>
 
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpKtSTGBfcnPOTs4l21sLoiRFCDWQrZ9w&libraries=places&callback=initAutocomplete" async defer></script>
 
         </x-slot>
 
@@ -54,9 +53,10 @@
                 {{ __('Cancel') }}
             </x-jet-secondary-button>
 
-            <x-jet-danger-button class="ml-3" wire:click="add" wire:loading.attr="disabled">
+            <x-jet-button class="ml-2" wire:click="create" wire:loading.attr="disabled">
                 {{ __('Save') }}
-            </x-jet-danger-button>
+            </x-jet-button>
         </x-slot>
+
     </x-jet-dialog-modal>
 </div>
