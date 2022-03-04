@@ -31,6 +31,16 @@ class Contacts extends Component
 
     }
 
+    public function cancelUpdate(){
+        $this->modalFormVisible = false;
+        $this->reset();
+    }
+
+    public function cancelDelete(){
+        $this->modalConfirmDeleteVisible = false;
+        $this->reset();
+    }
+
     public function delete(){
         Contact::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
@@ -62,12 +72,14 @@ class Contacts extends Component
         $this->validate();
         Contact::find($this->modelId)->update($this->modelData());
         $this->modalFormVisible = false;
+        $this->reset();
     }
 
     public function updateShowModal($id){
         $this->modelId = $id;
         $this->modalFormVisible = true;
         $this->loadModel();
+
     }
 
     public function read()
