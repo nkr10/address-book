@@ -4,10 +4,14 @@ namespace App\Http\Livewire;
 
 use App\Models\Contact;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Contacts extends Component
 {
+    use WithPagination;
     public $modalFormVisible = false; //only want to show the modal form when add button is clicked
+    public $modalConfirmDeleteVisible = false;
+    public $modelId;
 
     //properties that will map to our database table fields
     public $first_name;
@@ -17,8 +21,57 @@ class Contacts extends Component
     public $date_of_birth;
     public $physical_address;
 
+    public function rules()
+    {
+        return [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'e_mail' => 'required'
+        ];
+
+    }
+
+    public function deleteShowModal($id){
+        $this->modelId = $id;
+        $this->modalConfirmDeleteVisible = true;
+    }
+
+    public function mount()
+    {
+        // Resets the pagination after reloading the page
+        $this->resetPage();
+    }
+
+    public function loadModel(){
+        $data = Contact::find($this->modelId);
+        $this->first_name = $data->first_name;
+        $this->last_name = $data->last_name;
+        $this->e_mail = $data->e_mail;
+        $this->phone_number = $data->phone_number;
+        $this->date_of_birth = $data->date_of_birth;
+        $this->physical_address = $data->physical_address;
+    }
+
+    public function update(){
+        $this->validate();
+        Contact::find($this->modelId)->update($this->modelData());
+        $this->modalFormVisible = false;
+    }
+
+    public function updateShowModal($id){
+        $this->modelId = $id;
+        $this->modalFormVisible = true;
+        $this->loadModel();
+    }
+
+    public function read()
+    {
+        return Contact::paginate(3);
+    }
+
     public function create()
     {
+        $this->validate();
         Contact::create($this->modelData()); //save data
         $this->modalFormVisible = false; //hiding modal data
         $this->reset();
@@ -30,7 +83,8 @@ class Contacts extends Component
      *
      * @return void
      */
-    public function addShowModal(){
+    public function addShowModal()
+    {
         $this->modalFormVisible = true;
     }
 
@@ -52,6 +106,8 @@ class Contacts extends Component
      */
     public function render()
     {
-        return view('livewire.contacts');
+        return view('livewire.contacts', [
+            'data' => $this->read(),
+        ]);
     }
 }
