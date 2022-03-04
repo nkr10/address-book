@@ -141,7 +141,7 @@
             </x-jet-secondary-button>
 
             <x-jet-danger-button class="ml-2" wire:click="delete" wire:loading.attr="disabled">
-                {{ __('Delete Contact') }}
+                {{ __('Delete') }}
             </x-jet-danger-button>
         </x-slot>
     </x-jet-dialog-modal>

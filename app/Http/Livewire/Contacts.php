@@ -31,6 +31,12 @@ class Contacts extends Component
 
     }
 
+    public function delete(){
+        Contact::destroy($this->modelId);
+        $this->modalConfirmDeleteVisible = false;
+        $this->resetPage();
+    }
+
     public function deleteShowModal($id){
         $this->modelId = $id;
         $this->modalConfirmDeleteVisible = true;
