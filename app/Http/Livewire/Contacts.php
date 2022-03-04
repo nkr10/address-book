@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Contact;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -20,6 +21,7 @@ class Contacts extends Component
     public $phone_number;
     public $date_of_birth;
     public $physical_address;
+    public $user_id;
 
     public function rules()
     {
@@ -45,6 +47,7 @@ class Contacts extends Component
         Contact::destroy($this->modelId);
         $this->modalConfirmDeleteVisible = false;
         $this->resetPage();
+        $this->reset();
     }
 
     public function deleteShowModal($id){
@@ -113,7 +116,8 @@ class Contacts extends Component
             'e_mail' => $this->e_mail,
             'phone_number' => $this->phone_number,
             'date_of_birth' => $this->date_of_birth,
-            'physical_address' => $this->physical_address
+            'physical_address' => $this->physical_address,
+            'user_id' => Auth::id()
         ];
     }
 

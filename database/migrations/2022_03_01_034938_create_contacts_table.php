@@ -22,6 +22,7 @@ class CreateContactsTable extends Migration
             $table->date('date_of_birth');
             $table->string('physical_address');
             $table->timestamps();
+            $table->bigInteger('user_id');
         });
     }
 
