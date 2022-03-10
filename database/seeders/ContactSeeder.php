@@ -16,93 +16,103 @@ class ContactSeeder extends Seeder
     public function run()
     {
         Contact::create([
-            'first_name' => Str::random(5),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(5),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
 
         Contact::create([
-            'first_name' => Str::random(),
-            'last_name' => Str::random(),
-            'e_mail' => Str::random().'@gmail.com',
-            'phone_number' => '02-030-405-0692',
-            'date_of_birth' => '2022-03-07',
-            'physical_address' => Str::random()
+            'first_name'       => Str::random(),
+            'last_name'        => Str::random(),
+            'e_mail'           => Str::random() . '@gmail.com',
+            'phone_number'     => '02-030-405-0692',
+            'date_of_birth'    => '2022-03-07',
+            'physical_address' => Str::random(),
+            'user_id'          => 1
         ]);
     }
 }
